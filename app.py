@@ -25,4 +25,3 @@ def redirect_video():
 
 if __name__ == '__main__':
     app.run(debug=True)
-  
