@@ -2,7 +2,11 @@ from flask import Flask, redirect, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/get-video/mxfliofc-vip/URL', methods=['GET'])
+@app.route('/')
+def home():
+    return "<h1>GET USER VIP</h1>"
+
+@app.route('/get-video', methods=['GET'])
 def redirect_video():
     try:
         # Obter a URL completa da solicitação
@@ -25,3 +29,4 @@ def redirect_video():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
